@@ -1,0 +1,40 @@
+<div class="pannel">
+    <div class="pannel-body">
+        <div class="table-responsive">
+            <div class="row container-fluid">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" *ngFor="let prod of products">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="h4-responsive text-center p-3"> {{prod.name}} </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="product-img">
+                                <img src={{prod.imagePath}} width="125px;" height="250px;" style="width: 100%">
+                            </div>
+                            <div class="product-desc">
+                                <p class="lead text-center text-justify p-2">
+                                   {{prod.description}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price p-2 float-left">
+                                <h6>&#8377;{{prod.price}}</h6>
+                            </div>
+                            <div class="float-right">
+
+                                <button class="btn btn-default btn-md">Add to
+                                    Cart</button>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

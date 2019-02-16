@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div  style="text-align:center" >
+  <h1 id=ti>
+    Welcome to {{ title }}!
+    
+  </h1>
+  <button [routerLink]="['./cart-page']">View Cart</button>
+  <div style="text-align:right" >{{welcome}}</div>
+  <header-component></header-component>
+  <product></product>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+ 

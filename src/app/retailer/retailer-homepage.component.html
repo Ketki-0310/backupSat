@@ -1,0 +1,42 @@
+<div class="bg-img">
+
+        <div class="container pxy-5">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 style="font-family:courier;">Add Products</h2>
+              <form >
+                Product name:<br>
+                <input type="text" name="name" placeholder="Product name" [(ngModel)]="product.name">
+                <br>
+                Product path:<br>
+                <input type="text" name="imagePath" placeholder="Product imagePath" [(ngModel)]="product.imagePath">
+                <br>
+                Product Description:<br>
+                <input type="text" name="description" placeholder="Product description" [(ngModel)]="product.description">
+                <br>
+                Product Price:<br>
+                <input type="tel" name="price" placeholder="Product price" [(ngModel)]="product.price">
+                <br>
+                Category:<br>
+                <select  name="category" [(ngModel)]="product.category" >
+                  <option >HOME_APPLANCES</option>
+                  <option>FASHION</option>
+                  <option>FOOTWARE</option>
+                  <option>MOBILE</option>
+                </select>
+                <br>
+                <input type="submit" (click)="AddProduct()" value="Submit">
+              </form>
+            </div>
+            <div class="col-md-6">
+              <h2 style="font-family:courier;">Delete Products</h2>
+              <form action="/action_page.php">
+                Product name:<br>
+                <input type="text" name="name" [(ngModel)]="name">
+                <br>
+              <br>
+                <input type="submit" (click)="DeleteProduct()" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>

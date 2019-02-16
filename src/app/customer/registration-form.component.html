@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<form #pform="ngForm" (ngSubmit)="AddCustomer()" ngNativeValidate>
+    <div class="container">
+
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+
+        <label for="fname"><b>Firstname</b></label>
+        <input type="text" name="firstname" placeholder="Enter Firstname" [(ngModel)]="cerdentials.firstname"
+            required /> <br><br>
+        <label for="lname"><b>Lastname</b></label>
+        <input type="text" name="lastname" placeholder="Enter Lastname" [(ngModel)]="cerdentials.lastname" /><br><br>
+        <label for="Mobile Number"><b>Mobile Number</b> </label>
+        <input type="tel" name="contact" (keypress)="keyPress($event)" placeholder="Enter your mobile number"
+            maxlength="10" minlength="10" (keypress)="keyPress($event)" [(ngModel)]="cerdentials.contact"
+            required /><br><br>
+        <label for="email"><b>Email</b></label>
+        <input type="email" name="email" [(ngModel)]="cerdentials.email" placeholder="Enter Email" required />
+        <br><br>
+        <label for="psw"><b>Password</b></label><input type="password" name="password" placeholder="Enter Password"
+            [(ngModel)]="cerdentials.password" required /><br><br>
+
+           
+        <button type="submit" class="registerbtn" >Register</button>
+    </div>
+</form>
+
+
+
+<!--(click)="AddCustomer()"-->

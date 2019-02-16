@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+.bg-img {
+    /* The image used */
+    background-image: url("assets/img4.jpg");
+
+    min-height: 550px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+</style>
+</head>
+<body>
+<div class="bg-img">
+
+<div class="panel" >
+    <div class="panel-heading">{{title}}</div>
+    <div class="panel-body">
+<div  class="table-responsive" >
+   
+ 
+<table align="center">
+<tr>
+ <td>Retailer Name</td>
+ <td>Retailer Email</td>
+ <td>Delete Retailer</td>
+</tr>
+<tr *ngFor="let pro of retailer">
+<td>{{pro.name}}</td>
+<td>{{pro.email}}</td>
+<td><button type="submit" (click) = "deleteRetailer(pro.name)" >X</button></td>
+</tr>
+</table><br><br>
+
+<div>
+<table align="center">
+
+    <tr>
+      <td>Name:</td>
+         <td><input type='text' name='name' required></td>
+     </tr>
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+         <td>Category:</td>
+         <td><input type='text' name='name' required></td>
+     </tr>
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+         <td>Email id:</td>
+         <td><input type='email' name='name' required></td>
+     </tr>
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+         
+         <td>Password:</td>
+         <td><input type='password' name='name' required></td>
+     </tr>
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+          <button type="submit" style="margin-left: 50%">Submit</button>
+             
+     </table> 
+    </div>
+      
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

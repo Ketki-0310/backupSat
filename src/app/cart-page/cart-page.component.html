@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="pannel" width="450px">
+    <div class="pannel-body">
+        <div class="table-responsive" >
+            <div class="row container-fluid">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" *ngFor="let prod of products.items">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="h4-responsive text-center p-3">  </h4>
+                        </div>
+                        <div class="card-body">
+                           
+                            <div class="product-desc">
+                                <p class="lead text-center text-justify p-2">
+                                    Quantity {{ prod.quantity}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price p-2 float-right">
+                                <h6>&#8377;{{ prod.name }}{{prod.product_id}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <br/><br/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div>
+   
+    <button type="submit" class="btn" (click)="sendCart()" >Proceed to Order</button>
+    <button type="submit" class="btn">Cancel</button>
+</div>
